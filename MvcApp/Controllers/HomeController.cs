@@ -97,7 +97,7 @@ namespace MvcApp.Controllers
 
 
         // Передача словарей Dictionary
-        public string Index(Dictionary<string, string> items)
+        /*public string Index(Dictionary<string, string> items)
         {
             string result = "";
             foreach (var item in items)
@@ -106,10 +106,18 @@ namespace MvcApp.Controllers
             }
             return result;
         }
+        */
         /* https://localhost:7240/Home/Index?items[germany]=berlin&items[france]=paris&items[spain]=madrid */
 
 
-
+        // Объект Request.Query
+        public string Index()
+        {
+            string name = Request.Query["name"];
+            string age = Request.Query["age"];
+            return $"Name: {name}  Age: {age}";
+        }
+        // https://localhost:7240/Home/Index?name=Dex&age=34
     }
     public record class Person(string Name, int Age);
 }
