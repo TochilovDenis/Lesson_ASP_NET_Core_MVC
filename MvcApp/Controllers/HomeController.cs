@@ -59,9 +59,19 @@ namespace MvcApp.Controllers
 
 
         // Передача сложных объектов\
-        public string Index(Person person)
+        //public string Index(Person person)
+        //{
+        //    return $"Person Name: {person.Name}  Person Age: {person.Age}";  // https://localhost:7240/Home/Index?name=Dex&age=34
+        //}
+
+
+        // Передача массивов  //  https://localhost:7240/Home/Index?people=Dex&people=Bob&people=Sam
+        public string Index(string[] people)
         {
-            return $"Person Name: {person.Name}  Person Age: {person.Age}";  // https://localhost:7240/Home/Index?name=Dex&age=34
+            string result = "";
+            foreach (var person in people)
+                result = $"{result}{person}; ";
+            return result;
         }
     }
     public record class Person(string Name, int Age);
