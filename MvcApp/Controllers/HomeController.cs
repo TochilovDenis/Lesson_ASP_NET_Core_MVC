@@ -9,7 +9,7 @@ namespace MvcApp.Controllers
         {
             return View();
         }*/
-        [HttpGet]
+        /*[HttpGet]
         public string Index() => "Hello IT Academy-TOP 2";
 
         [HttpPost]
@@ -18,10 +18,14 @@ namespace MvcApp.Controllers
         protected internal string HelloOne() => "Hello IT Academy-TOP 3";
 
         [ActionName("Welcome")]
-        public string HelloTwo() => "Hello IT Academy-TOP 4";
+        public string HelloTwo() => "Hello IT Academy-TOP 4";*/
 
 
-
-
+        // Response
+        public async Task Index()
+        {
+            Response.ContentType = "text/html;charset=utf-8";
+            await Response.WriteAsync("<h2>Hello IT Academy-TOP</h2>");
+        }
     }
 }
