@@ -22,24 +22,39 @@ namespace MvcApp.Controllers
 
 
         // Response
-/*        public async Task Index()
-        {
-            Response.ContentType = "text/html;charset=utf-8";
-            await Response.WriteAsync("<h2>Hello IT Academy-TOP</h2>");
-        }*/
+        /*        public async Task Index()
+                {
+                    Response.ContentType = "text/html;charset=utf-8";
+                    await Response.WriteAsync("<h2>Hello IT Academy-TOP</h2>");
+                }*/
 
 
         // Request
-        public async Task Index()
+        //public async Task Index()
+        //{
+        //    Response.ContentType = "text/html;charset=utf-8";
+        //    System.Text.StringBuilder tableBuilder = new("<h2>Request headers</h2><table>");
+        //    foreach (var header in Request.Headers)
+        //    {
+        //        tableBuilder.Append($"<tr><td>{header.Key}</td><td>{header.Value}</td></tr>");
+        //    }
+        //    tableBuilder.Append("</table>");
+        //    await Response.WriteAsync(tableBuilder.ToString());
+        //}
+
+        // Получение данных через строку запроса
+         public string Index(string name) => $"Your name: {name}";  // https://localhost:7240/Home/Index?name=Dex
+
+        // или
+        public string Index(string name, int age)
         {
-            Response.ContentType = "text/html;charset=utf-8";
-            System.Text.StringBuilder tableBuilder = new("<h2>Request headers</h2><table>");
-            foreach (var header in Request.Headers)
-            {
-                tableBuilder.Append($"<tr><td>{header.Key}</td><td>{header.Value}</td></tr>");
-            }
-            tableBuilder.Append("</table>");
-            await Response.WriteAsync(tableBuilder.ToString());
+            return $"Name: {name}  Age: {age}";                    // https://localhost:7240/Home/Index?name=Dex&age=34.
+        }
+
+        // или
+        public string Index(string name = "Dex", int age = 34)
+        {
+            return $"Name: {name}  Age: {age}";
         }
     }
 }
