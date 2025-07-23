@@ -43,18 +43,27 @@ namespace MvcApp.Controllers
         //}
 
         // Получение данных через строку запроса
-         public string Index(string name) => $"Your name: {name}";  // https://localhost:7240/Home/Index?name=Dex
+        // public string Index(string name) => $"Your name: {name}";  // https://localhost:7240/Home/Index?name=Dex
 
-        // или
-        public string Index(string name, int age)
-        {
-            return $"Name: {name}  Age: {age}";                    // https://localhost:7240/Home/Index?name=Dex&age=34.
-        }
+        //// или
+        //public string Index(string name, int age)
+        //{
+        //    return $"Name: {name}  Age: {age}";                    // https://localhost:7240/Home/Index?name=Dex&age=34
+        //}
 
-        // или
-        public string Index(string name = "Dex", int age = 34)
+        //// или
+        //public string Index(string name = "Dex", int age = 34)
+        //{
+        //    return $"Name: {name}  Age: {age}";
+        //}
+
+
+        // Передача сложных объектов\
+        public string Index(Person person)
         {
-            return $"Name: {name}  Age: {age}";
+            return $"Person Name: {person.Name}  Person Age: {person.Age}";  // https://localhost:7240/Home/Index?name=Dex&age=34
         }
     }
+    public record class Person(string Name, int Age);
 }
+
