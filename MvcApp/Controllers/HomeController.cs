@@ -136,14 +136,13 @@ namespace MvcApp.Controllers
     // Объект Request.Query
     /* public class HomeController : Controller
      {
-         *//* public string Index()
+          /* public string Index()
           {
               string name = Request.Query["name"];
               string age = Request.Query["age"];
               return $"Name: {name}  Age: {age}";
           }
-          // https://localhost:7240/Home/Index?name=Dex&age=34*//*
-
+          // https://localhost:7240/Home/Index?name=Dex&age=34
      }*/
 
 
