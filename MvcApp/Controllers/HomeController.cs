@@ -168,7 +168,7 @@ namespace MvcApp.Controllers
 
 
     // Получение сложных объектов
-    public class HomeController : Controller
+    /*public class HomeController : Controller
     {
         public async Task Index()
         {
@@ -185,10 +185,35 @@ namespace MvcApp.Controllers
         [HttpPost]
         public string Index(Person person) => $"{person.Name}: {person.Age}";
     }
-
-
-
+    
     public record class Person(string Name, int Age);
+    */
 
+
+    // Получение массивов
+    public class HomeController : Controller
+    {
+        public async Task Index()
+        {
+            string form = @"<form method='post'>
+                <p><input name='names' /></p>
+                <p><input name='names' /></p>
+                <p><input name='names' /></p>
+                <input type='submit' value='Send' />
+            </form>";
+            Response.ContentType = "text/html; charset=utf-8";
+            await Response.WriteAsync(form);
+        }
+        [HttpPost]
+        public string Index(string[] names)
+        {
+            string result = "";
+            foreach (string name in names)
+            {
+                result = $"{result} {name}";
+            }
+            return result;
+        }
+    }
 }
 
