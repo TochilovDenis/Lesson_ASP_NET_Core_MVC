@@ -1,6 +1,8 @@
 ﻿var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddMvc(); // добавляем сервисы MVC
+// builder.Services.AddMvc(); // добавляем сервисы MVC
+
+builder.Services.AddControllers();  // добавляем поддержку контроллеров
 
 var app = builder.Build();
 

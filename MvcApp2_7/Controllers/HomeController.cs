@@ -40,11 +40,35 @@ namespace MvcApp.Controllers
                 <input type='submit' value='Send' />
             </form>";
             return new HtmlResult(form);// Возвращаем HTML-форму
-             // Альтернатива: return Content(form);
+            // Альтернатива: return Content(form);
+
         }
+
+
+        /// <summary>
+        /// Пример переадресации на маршрут с использованием именованного маршрута "default"
+        /// </summary>
+        /// <returns>
+        /// HTTP-редирект (302) на действие About контроллера Home 
+        /// с параметрами name="Tom" и age=22
+        /// </returns>
+        public IActionResult RedirectExample()
+        {
+            // Переадресация на маршрут с именем "default"
+            // Маршрут должен быть определен в Startup.cs/Program.cs
+            return RedirectToRoute("default", new { controller = "Home", action = "About", name = "Tom", age = 22 });
+
+            /*  При переходе на /Home/RedirectExample произойдет перенаправление на:
+                https://localhost:7264/Home/About?name=Tom&age=22
+
+                Примечания:
+                1. Порт (7264) может отличаться в вашем окружении
+                2. Это временный редирект (HTTP 302)
+                3. Для работы требуется наличие маршрута с именем "default" */
+        }
+
+
         [HttpPost]
-
-
         /// <summary>
         /// Обработка POST-запроса с данными из формы.
         /// </summary>
@@ -103,6 +127,7 @@ namespace MvcApp.Controllers
         {
             // Альтернатива: return Redirect("~/Home/About?name=Tom&age=37");
 
+            // Временное перенаправление (302)
             return RedirectToAction("About", "Home", new { name = "Tom", age = 37 });
             /*
              При переходе на /Home/Contact произойдет перенаправление на:
@@ -110,6 +135,8 @@ namespace MvcApp.Controllers
              */
         }
     }
+
+
     /// <summary>
     /// Модель данных для человека (имя и возраст).
     /// </summary>
