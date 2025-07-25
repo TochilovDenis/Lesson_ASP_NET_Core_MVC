@@ -2,14 +2,14 @@
 
 namespace MvcApp.Controllers
 {
-
-    public class HomeController : Controller
+    /*public class HomeController : Controller
     {
-        /*public IActionResult Index()
+        public IActionResult Index()
         {
             return View();
-        }*/
-        /*[HttpGet]
+        }
+
+        [HttpGet]
         public string Index() => "Hello IT Academy-TOP 2";
 
         [HttpPost]
@@ -18,86 +18,107 @@ namespace MvcApp.Controllers
         protected internal string HelloOne() => "Hello IT Academy-TOP 3";
 
         [ActionName("Welcome")]
-        public string HelloTwo() => "Hello IT Academy-TOP 4";*/
+        public string HelloTwo() => "Hello IT Academy-TOP 4";
+    }*/
 
 
+    /*public class HomeController : Controller
+    {
         // Response
-        /*        public async Task Index()
-                {
-                    Response.ContentType = "text/html;charset=utf-8";
-                    await Response.WriteAsync("<h2>Hello IT Academy-TOP</h2>");
-                }*/
+        public async Task Index()
+        {
+            Response.ContentType = "text/html;charset=utf-8";
+            await Response.WriteAsync("<h2>Hello IT Academy-TOP</h2>");
+        }
+
+    }*/
 
 
+    /*public class HomeController : Controller
+    {
         // Request
-        //public async Task Index()
-        //{
-        //    Response.ContentType = "text/html;charset=utf-8";
-        //    System.Text.StringBuilder tableBuilder = new("<h2>Request headers</h2><table>");
-        //    foreach (var header in Request.Headers)
-        //    {
-        //        tableBuilder.Append($"<tr><td>{header.Key}</td><td>{header.Value}</td></tr>");
-        //    }
-        //    tableBuilder.Append("</table>");
-        //    await Response.WriteAsync(tableBuilder.ToString());
-        //}
-
-        // Получение данных через строку запроса
-        // public string Index(string name) => $"Your name: {name}";  // https://localhost:7240/Home/Index?name=Dex
-
-        //// или
-        //public string Index(string name, int age)
-        //{
-        //    return $"Name: {name}  Age: {age}";                    // https://localhost:7240/Home/Index?name=Dex&age=34
-        //}
-
-        //// или
-        //public string Index(string name = "Dex", int age = 34)
-        //{
-        //    return $"Name: {name}  Age: {age}";
-        //}
+        public async Task Index()
+        {
+            Response.ContentType = "text/html;charset=utf-8";
+            System.Text.StringBuilder tableBuilder = new("<h2>Request headers</h2><table>");
+            foreach (var header in Request.Headers)
+            {
+                tableBuilder.Append($"<tr><td>{header.Key}</td><td>{header.Value}</td></tr>");
+            }
+            tableBuilder.Append("</table>");
+            await Response.WriteAsync(tableBuilder.ToString());
+        }
+    }*/
 
 
-        // Передача сложных объектов\
-        //public string Index(Person person)
-        //{
-        //    return $"Person Name: {person.Name}  Person Age: {person.Age}";  // https://localhost:7240/Home/Index?name=Dex&age=34
-        //}
+    // Получение данных через строку запроса
+    /*public class HomeController : Controller
+    {
+
+        public string Index(string name) => $"Your name: {name}";  // https://localhost:7240/Home/Index?name=Dex
+        // или
+        public string Index(string name, int age)
+        {
+            return $"Name: {name}  Age: {age}";                    // https://localhost:7240/Home/Index?name=Dex&age=34
+        }
+        // или
+        public string Index(string name = "Dex", int age = 34)
+        {
+            return $"Name: {name}  Age: {age}";
+        }
+    }*/
 
 
-        // Передача массивов  //  https://localhost:7240/Home/Index?people=Dex&people=Bob&people=Sam
-        //public string Index(string[] people)
-        //{
-        //    string result = "";
-        //    foreach (var person in people)
-        //        result = $"{result}{person}; ";
-        //    return result;
-        //}
+    // Передача сложных объектов
+    /*public class HomeController : Controller
+    {
+        public string Index(Person person)
+        {
+            return $"Person Name: {person.Name}  Person Age: {person.Age}";  // https://localhost:7240/Home/Index?name=Dex&age=34
+        }
+    }*/
 
 
-        // Передача массивов сложных объектов
-        /* public string Index(Person[] people)
-         {
-             string result = "";
-             foreach (Person person in people)
-             {
-                 result = $"{result} {person.Name}; ";
-             }
-             return result;
-         }
-        */
-        /*
+    // Передача массивов  //  https://localhost:7240/Home/Index?people=Dex&people=Bob&people=Sam
+    /*public class HomeController : Controller
+    {
+        public string Index(string[] people)
+        {
+            string result = "";
+            foreach (var person in people)
+                result = $"{result}{person}; ";
+            return result;
+        }
+    }*/
+
+
+    // Передача массивов сложных объектов
+    /*public class HomeController : Controller
+    {
+        public string Index(Person[] people)
+        {
+            string result = "";
+            foreach (Person person in people)
+            {
+                result = $"{result} {person.Name}; ";
+            }
+            return result;
+        }
+        *//*
           И чтобы передать в этот метод данные, нам надо использовать запрос типа
            https://localhost:7240/Home/Index?people[0].name=Tom&people[0].age=37&people[1].name=Bob&people[1].age=41
-         В этом случае в массиве people будут два объекта Person.
+          В этом случае в массиве people будут два объекта Person.
 
-         Также можно опустить название параметра и оставить только индексы:
+          Также можно опустить название параметра и оставить только индексы:
            https://localhost:7240/Home/Index?[0].name=Tom&[0].age=37&[1].name=Bob&[1].age=41*//*
-        */
+         *//*
+    }*/
 
 
-        // Передача словарей Dictionary
-        /*public string Index(Dictionary<string, string> items)
+    // Передача словарей Dictionary
+    /*public class HomeController : Controller
+    {
+        public string Index(Dictionary<string, string> items)
         {
             string result = "";
             foreach (var item in items)
@@ -106,19 +127,26 @@ namespace MvcApp.Controllers
             }
             return result;
         }
-        */
-        /* https://localhost:7240/Home/Index?items[germany]=berlin&items[france]=paris&items[spain]=madrid */
+
+        // https://localhost:7240/Home/Index?items[germany]=berlin&items[france]=paris&items[spain]=madrid 
+    }*/
 
 
-        // Объект Request.Query
-        public string Index()
-        {
-            string name = Request.Query["name"];
-            string age = Request.Query["age"];
-            return $"Name: {name}  Age: {age}";
-        }
-        // https://localhost:7240/Home/Index?name=Dex&age=34
-    }
-    public record class Person(string Name, int Age);
+    // Объект Request.Query
+    /* public class HomeController : Controller
+     {
+         *//* public string Index()
+          {
+              string name = Request.Query["name"];
+              string age = Request.Query["age"];
+              return $"Name: {name}  Age: {age}";
+          }
+          // https://localhost:7240/Home/Index?name=Dex&age=34*//*
+
+     }*/
+
+
+
 }
+public record class Person(string Name, int Age);
 
