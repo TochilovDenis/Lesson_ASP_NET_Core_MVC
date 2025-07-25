@@ -105,14 +105,14 @@ namespace MvcApp.Controllers
             }
             return result;
         }
-        *//*
+        */
+    /*
           И чтобы передать в этот метод данные, нам надо использовать запрос типа
            https://localhost:7240/Home/Index?people[0].name=Tom&people[0].age=37&people[1].name=Bob&people[1].age=41
           В этом случае в массиве people будут два объекта Person.
 
           Также можно опустить название параметра и оставить только индексы:
-           https://localhost:7240/Home/Index?[0].name=Tom&[0].age=37&[1].name=Bob&[1].age=41*//*
-         *//*
+           https://localhost:7240/Home/Index?[0].name=Tom&[0].age=37&[1].name=Bob&[1].age=41
     }*/
 
 
@@ -145,6 +145,27 @@ namespace MvcApp.Controllers
           // https://localhost:7240/Home/Index?name=Dex&age=34
      }*/
 
+
+    /*https://metanit.com/sharp/aspnetmvc/2.4.php*/
+    // Передача данных в контроллер через формы
+    public class HomeController : Controller
+    {
+        [HttpGet]
+        public async Task Index()
+        {
+            string content = @"<form method='post'>
+                <label>Name:</label><br />
+                <input name='name' /><br />
+                <label>Age:</label><br />
+                <input type='number' name='age' /><br />
+                <input type='submit' value='Send' />
+            </form>";
+            Response.ContentType = "text/html;charset=utf-8";
+            await Response.WriteAsync(content);
+        }
+        [HttpPost]
+        public string Index(string name, int age) => $"{name}: {age}";
+    }
 
 
 }
