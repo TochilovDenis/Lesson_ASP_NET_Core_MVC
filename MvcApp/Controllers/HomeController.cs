@@ -51,6 +51,7 @@ namespace MvcApp.Controllers
     }*/
 
 
+    // Прочитать материал https://metanit.com/sharp/aspnetmvc/2.3.php
     // Получение данных через строку запроса
     /*public class HomeController : Controller
     {
