@@ -257,7 +257,7 @@ namespace MvcApp.Controllers
 
 
     // Отправка массивов сложных объектов
-    public class HomeController : Controller
+    /*public class HomeController : Controller
     {
         public async Task Index()
         {
@@ -290,9 +290,31 @@ namespace MvcApp.Controllers
             return result;
         }
     }
-    public record class Person(string Name, int Age);
+    public record class Person(string Name, int Age);*/
 
 
-
+    // Получение данных из контекста запроса
+    public class HomeController : Controller
+    {
+        public async Task Index()
+        {
+            string content = @"<form method='post' action='/Home/PersonData'>
+                <label>Name:</label><br />
+                    <input name='name' /><br />
+                <label>Age:</label><br />
+                    <input type='number' name='age' /><br />
+                    <input type='submit' value='Send' />
+            </form>";
+            Response.ContentType = "text/html;charset=utf-8";
+            await Response.WriteAsync(content);
+        }
+        [HttpPost]
+        public string PersonData()
+        {
+            string name = Request.Form["name"];
+            string age = Request.Form["age"];
+            return $"{name}: {age}";
+        }
+    }
 }
 
