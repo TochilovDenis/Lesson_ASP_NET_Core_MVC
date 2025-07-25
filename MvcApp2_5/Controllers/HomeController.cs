@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MvcApp2_5;
 
 namespace MvcApp.Controllers
 {
 
     public class HomeController : Controller
     {
-        public async Task Index()
+        public IActionResult Index()
         {
             string form = @"<form method='post'>
                 <p>
@@ -32,8 +33,7 @@ namespace MvcApp.Controllers
                 </p>
                 <input type='submit' value='Send' />
             </form>";
-            Response.ContentType = "text/html;charset=utf-8";
-            await Response.WriteAsync(form);
+            return new HtmlResult(form);
         }
         [HttpPost]
         public string Index(Person[] people, Pet[] pets)
