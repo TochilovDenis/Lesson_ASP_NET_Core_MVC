@@ -59,6 +59,11 @@ namespace MvcApp.Controllers
             return Json(people, jsonOptions);
 
         }
+
+        public IActionResult Contact()
+        {
+            return Redirect("~/Home/Index");
+        }
     }
     public record class Person(string Name, int Age);
     public record class Pet(string Name, string Breed);
