@@ -34,11 +34,12 @@ namespace MvcApp.Controllers
                 <input type='submit' value='Send' />
             </form>";
             return new HtmlResult(form);
+            //return Content(form);
         }
         [HttpPost]
-        public string Index(Person[] people, Pet[] pets)
+        public IActionResult Index(Person[] people, Pet[] pets)
         {
-            string result = "";
+            /*string result = "";
             foreach (Person person in people)
             {
                 result = $"{result} \n{person}";
@@ -47,8 +48,16 @@ namespace MvcApp.Controllers
             foreach (Pet pet in pets)
             {
                 result = $"{result} \n{pet}";
-            }
-            return result;
+            }     
+            return result;*/
+
+            var jsonOptions = new System.Text.Json.JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true, // не учитываем регистр
+                WriteIndented = true                // отступы для красоты
+            };
+            return Json(people, jsonOptions);
+
         }
     }
     public record class Person(string Name, int Age);
