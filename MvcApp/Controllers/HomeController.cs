@@ -22,9 +22,9 @@ namespace MvcApp.Controllers
     }*/
 
 
+    // Response
     /*public class HomeController : Controller
-    {
-        // Response
+    {       
         public async Task Index()
         {
             Response.ContentType = "text/html;charset=utf-8";
@@ -34,9 +34,9 @@ namespace MvcApp.Controllers
     }*/
 
 
+    // Request
     /*public class HomeController : Controller
-    {
-        // Request
+    {        
         public async Task Index()
         {
             Response.ContentType = "text/html;charset=utf-8";
@@ -55,7 +55,6 @@ namespace MvcApp.Controllers
     // Получение данных через строку запроса
     /*public class HomeController : Controller
     {
-
         public string Index(string name) => $"Your name: {name}";  // https://localhost:7240/Home/Index?name=Dex
         // или
         public string Index(string name, int age)
