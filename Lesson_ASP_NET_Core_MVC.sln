@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloMvcApp", "HelloMvcApp\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApp", "MvcApp\MvcApp.csproj", "{DDFC80DA-A191-477A-AA64-E6C26616000E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Person_Pet", "Person_Pet\Person_Pet.csproj", "{040A7BF4-D83C-43FC-9129-00B38E5BFBD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DDFC80DA-A191-477A-AA64-E6C26616000E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDFC80DA-A191-477A-AA64-E6C26616000E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDFC80DA-A191-477A-AA64-E6C26616000E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{040A7BF4-D83C-43FC-9129-00B38E5BFBD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{040A7BF4-D83C-43FC-9129-00B38E5BFBD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{040A7BF4-D83C-43FC-9129-00B38E5BFBD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{040A7BF4-D83C-43FC-9129-00B38E5BFBD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
