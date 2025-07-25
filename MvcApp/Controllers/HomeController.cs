@@ -147,7 +147,7 @@ namespace MvcApp.Controllers
 
     /*https://metanit.com/sharp/aspnetmvc/2.4.php*/
     // Передача данных в контроллер через формы
-    public class HomeController : Controller
+    /*public class HomeController : Controller
     {
         [HttpGet]
         public async Task Index()
@@ -164,9 +164,31 @@ namespace MvcApp.Controllers
         }
         [HttpPost]
         public string Index(string name, int age) => $"{name}: {age}";
+    }*/
+
+
+    // Получение сложных объектов
+    public class HomeController : Controller
+    {
+        public async Task Index()
+        {
+            string content = @"<form method='post'>
+                <label>Name:</label><br />
+                <input name='name' /><br />
+                <label>Age:</label><br />
+                <input type='number' name='age' /><br />
+                <input type='submit' value='Send' />
+            </form>";
+            Response.ContentType = "text/html;charset=utf-8";
+            await Response.WriteAsync(content);
+        }
+        [HttpPost]
+        public string Index(Person person) => $"{person.Name}: {person.Age}";
     }
 
 
+
+    public record class Person(string Name, int Age);
+
 }
-public record class Person(string Name, int Age);
 
