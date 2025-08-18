@@ -1,0 +1,26 @@
+﻿@* Типы конструкций Razor *@
+@* ---------------------- *@
+
+@{
+    string head = "Hello AcademyTop!"; // определяем переменную head
+    string text = "ASP.NET Core Application";   // определяем переменную text
+
+    int i = 8;
+    <text>@i</text>
+}
+
+<text>@(i + 1)</text>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>METANIT.COM</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h2>@head</h2> <!-- используем переменную head -->
+    <div>@text</div> <!-- используем переменную text -->
+
+    <p>@@DateTime.Now =@DateTime.Now.ToLongDateString()</p>
+</body>
+</html>
