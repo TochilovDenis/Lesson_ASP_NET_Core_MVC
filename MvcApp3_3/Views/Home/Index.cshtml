@@ -1,4 +1,7 @@
-﻿@{
+﻿@* ViewData, ViewBag *@
+@* ----------------- *@
+
+@* @{
     ViewData["Title"] = "ViewData ASP.NET Core MVC";
 
     ViewBag.Title = "ViewBag.Title ASP.NET Core MVC";
@@ -14,6 +17,21 @@
 <h2>Count: @ViewBag.People.Count</h2>
 <ul>
     @foreach (string person in ViewBag.People)
+    {
+        <li>@person</li>
+    }
+</ul> *@
+
+
+
+@* Модель представления *@
+@* -------------------- *@
+
+@model List<string>
+
+<h2>Count: @Model.Count</h2>
+<ul>
+    @foreach (string person in Model)
     {
         <li>@person</li>
     }

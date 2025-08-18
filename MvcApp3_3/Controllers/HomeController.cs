@@ -7,18 +7,23 @@ namespace MvcApp.Controllers
     {
         public IActionResult Index()
         {
-            // ViewData
-            // ViewData представляет словарь из пар ключ-значение:
-            ViewData["Message"] = "Hello AcademyTop";
+            //// ViewData
+            //// ViewData представляет словарь из пар ключ-значение:
+            //ViewData["Message"] = "Hello AcademyTop";
 
-            // ViewBag
-            // ViewBag во многом подобен ViewData.Он позволяет определить различные свойства и присвоить им любое значение. 
-            ViewBag.Message = "Hello METANIT.COM";
+            //// ViewBag
+            //// ViewBag во многом подобен ViewData.Он позволяет определить различные свойства и присвоить им любое значение. 
+            //ViewBag.Message = "Hello METANIT.COM";
 
-            ViewBag.People = new List<string> { "Tom", "Sam", "Bob" };
+            //ViewBag.People = new List<string> { "Tom", "Sam", "Bob" };
 
-            return View();
+            //return View();
+
+            var people = new List<string> { "Tom", "Sam", "Bob" };
+            return View(people);
         }
+
+
     }
 }
 
