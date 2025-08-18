@@ -1,7 +1,7 @@
 ﻿@* Типы конструкций Razor *@
 @* ---------------------- *@
 
-@{
+@* @{
     string head = "Hello AcademyTop!"; // определяем переменную head
     string text = "ASP.NET Core Application";   // определяем переменную text
 
@@ -23,4 +23,48 @@
 
     <p>@@DateTime.Now =@DateTime.Now.ToLongDateString()</p>
 </body>
-</html>
+</html> *@
+
+
+
+@* Условные конструкции *@
+@* -------------------- *@
+
+@* Конструкция if-else: *@
+@{
+    string morning = "Good Morning";
+    string evening = "Good Evening";
+    string hello = "Hello";
+    int hour = DateTime.Now.Hour;
+}
+@if (hour < 12)
+{
+    <h2>@morning</h2>
+}
+else if (hour > 17)
+{
+    <h2>@evening</h2>
+}
+else
+{
+    <h2>@hello</h2>
+}
+
+
+@* Конструкция switch: *@
+
+@{
+    string language = "german";
+}
+@switch (language)
+{
+    case "russian":
+        <h3>Привет мир!</h3>
+        break;
+    case "german":
+        <h3>Hallo Welt!</h3>
+        break;
+    default:
+        <h3>Hello World!</h3>
+        break;
+}
