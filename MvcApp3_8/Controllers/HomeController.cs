@@ -16,9 +16,19 @@ namespace MvcApp.Controllers
         //    return $"User Name: {username}   Password: {password}   Age: {age}  Comment: {comment}";
         //}
 
-        [HttpPost]
-        public string Index(string language) => $"Language: {language}";
+        //[HttpPost]
+        //public string Index(string language) => $"Language: {language}";
 
+        [HttpPost]
+        public string Index(string[] languages)
+        {
+            string result = "Вы выбрали:";
+            foreach (string lang in languages)
+            {
+                result = $"{result} {lang};";
+            }
+            return result;
+        }
 
         public IActionResult About() => View();
 
