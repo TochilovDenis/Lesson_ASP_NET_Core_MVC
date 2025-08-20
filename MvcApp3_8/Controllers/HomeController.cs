@@ -6,15 +6,19 @@ namespace MvcApp.Controllers
     {
         [HttpGet]
         public IActionResult Index() => View();
-        
+
         //[HttpPost]
         //public string Index(string username) => $"User Name: {username}";
 
+        //[HttpPost]
+        //public string Index(string username, string password, int age, string comment)
+        //{
+        //    return $"User Name: {username}   Password: {password}   Age: {age}  Comment: {comment}";
+        //}
+
         [HttpPost]
-        public string Index(string username, string password, int age, string comment)
-        {
-            return $"User Name: {username}   Password: {password}   Age: {age}  Comment: {comment}";
-        }
+        public string Index(string language) => $"Language: {language}";
+
 
         public IActionResult About() => View();
 

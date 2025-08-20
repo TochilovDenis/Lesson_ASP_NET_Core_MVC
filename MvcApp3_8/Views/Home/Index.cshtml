@@ -14,3 +14,19 @@
 <h1>Welcome</h1>
 
 @await Html.PartialAsync("Hello")
+
+
+<form method="post">
+    <p>
+        <label for="language">Выберите язык:</label>
+        <select name="language">
+            <option value="csharp">C#</option>
+            <option value="vbnet">Visual Basic.NET</option>
+            <option value="fsharp">F#</option>
+            <option value="typescript">TypeScript</option>
+        </select>
+    </p>
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>
