@@ -1,0 +1,14 @@
+﻿@model IEnumerable<string>
+<ul>
+    if(!Model.Any()){
+        @foreach (string s in Model)
+        {
+            <li>@s</li>
+        }
+    }
+    else{
+        <span> model none </span>
+    }
+</ul>
+
+<!-- https://localhost:7226/Home/Hello -->
