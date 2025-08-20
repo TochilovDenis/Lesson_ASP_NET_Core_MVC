@@ -4,7 +4,7 @@ namespace MvcApp4_0.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index() => "Index Page";
-        public string About() => "About Page";
+        public string Index(int id) => $"Index Page. Id: {id}";
+        public string About(string name, int age) => $"About Page. Name: {name}  Age: {age}";
     }
 }
