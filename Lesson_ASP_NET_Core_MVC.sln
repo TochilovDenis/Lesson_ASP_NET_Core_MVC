@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApp3_4", "MvcApp3_4\MvcA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApp3_5", "MvcApp3_5\MvcApp3_5.csproj", "{17C1CDF6-FCC5-4F7F-AF6B-1DA40D8A2097}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApp3_6", "MvcApp3_6\MvcApp3_6.csproj", "{F6EBD0AF-C6BC-487F-B0A6-67F8495DEEAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{17C1CDF6-FCC5-4F7F-AF6B-1DA40D8A2097}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17C1CDF6-FCC5-4F7F-AF6B-1DA40D8A2097}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17C1CDF6-FCC5-4F7F-AF6B-1DA40D8A2097}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6EBD0AF-C6BC-487F-B0A6-67F8495DEEAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6EBD0AF-C6BC-487F-B0A6-67F8495DEEAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6EBD0AF-C6BC-487F-B0A6-67F8495DEEAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6EBD0AF-C6BC-487F-B0A6-67F8495DEEAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
