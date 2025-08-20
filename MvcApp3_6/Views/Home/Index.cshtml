@@ -4,10 +4,13 @@
 }
 
 
-@await Html.PartialAsync("Hello")  <!-- Встраивание частичного представления в обычное -->
 
 <h2>Person Data</h2>
 <h3>Name: @tom.Name</h3>
 <h3>Age: @tom.Age</h3>
 
 <h3>Index Content</h3>
+
+<h1>Welcome</h1>
+
+@await Html.PartialAsync("Hello", new List<string> { "Hello", "Привет", "Hallo", "Salut" }) <!-- Передача данных в частичное представление -->
