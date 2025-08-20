@@ -1,0 +1,14 @@
+﻿@model IEnumerable<string>
+<ul>
+    @try{
+        foreach (string s in Model)
+        {
+            <li>@s</li>
+        }
+    }
+    catch(Exception e){
+        <span> model none </span>
+    }
+</ul>
+
+<!-- https://localhost:7226/Home/Hello -->
