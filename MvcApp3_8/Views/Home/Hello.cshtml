@@ -1,14 +1,6 @@
-﻿@model IEnumerable<string>
-<ul>
-    @try{
-        foreach (string s in Model)
-        {
-            <li>@s</li>
-        }
-    }
-    catch(Exception e){
-        <span> model none </span>
-    }
-</ul>
-
-<!-- https://localhost:7226/Home/Hello -->
+﻿<h2>User Name Form</h2>
+<form method="post">
+    <label>User Name:</label><br />
+    <input type="text" name="username" /><br />
+    <input type="submit" value="Send" />
+</form>
