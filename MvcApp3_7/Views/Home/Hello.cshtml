@@ -1,12 +1,12 @@
 ﻿@model IEnumerable<string>
 <ul>
-    if(!Model.Any()){
-        @foreach (string s in Model)
+    @try{
+        foreach (string s in Model)
         {
             <li>@s</li>
         }
     }
-    else{
+    catch(Exception e){
         <span> model none </span>
     }
 </ul>

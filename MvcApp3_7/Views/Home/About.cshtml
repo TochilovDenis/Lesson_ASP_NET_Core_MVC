@@ -1,5 +1,9 @@
 ﻿@{
     ViewBag.Title = "About";
-    Layout = "/Views/Shared/_Layout.cshtml";
+    
 }
+
 <h3>About Content</h3>
+
+@inject ITimeService timeService
+<h2>Current Time: @timeService.Time</h2>
