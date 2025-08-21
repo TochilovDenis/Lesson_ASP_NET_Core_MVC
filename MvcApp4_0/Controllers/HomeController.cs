@@ -4,15 +4,14 @@ namespace MvcApp4_0.Controllers
 {
     public class HomeController : Controller
     {
-        //public string Index(int id) => $"Index Page. Id: {id}";
+        [HttpGet]
+        public string Index() => $"Home/Index action";
 
-        public string Index(int? id)
-        {
-            if (id is not null) return $"Product Id: {id}";
+        [HttpPost]
+        public string About() => $"Home/About action";
 
-            return "Product List";
-        }
-
-        public string About(string name, int age) => $"About Page. Name: {name}  Age: {age}";
+        [HttpGet]
+        public string Contact(int age = 5, string name = "Dex") 
+            => $"Home/Contact action - Name: {name}, Age: {age}";
     }
 }
