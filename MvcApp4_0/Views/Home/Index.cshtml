@@ -1,15 +1,15 @@
 ﻿@{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Главная страница";
     Person tom = new Person("Tom", 37);
 }
 
-<h1>Index Content</h1>
+
 
 <h2>Person Data</h2>
 <h3>Name: @tom.Name</h3>
 <h3>Age: @tom.Age</h3>
 
-@await Html.PartialAsync("Hello")
+@await Html.PartialAsync("UserForm")
 
 <form method="post">
     <p>

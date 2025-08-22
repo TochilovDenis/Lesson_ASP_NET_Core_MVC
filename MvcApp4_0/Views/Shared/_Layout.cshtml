@@ -2,22 +2,86 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width"/>
-    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - My ASP.NET App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .nav-menu {
+            margin-top: 15px;
+            display: flex;
+            gap: 20px;
+        }
+
+            .nav-menu a {
+                text-decoration: none;
+                color: #007bff;
+                font-weight: 500;
+                padding: 5px 10px;
+                border-radius: 4px;
+                transition: all 0.3s ease;
+            }
+
+                .nav-menu a:hover {
+                    background-color: #007bff;
+                    color: white;
+                    text-decoration: none;
+                }
+
+        .main-content {
+            padding: 30px 20px;
+            min-height: calc(100vh - 200px);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+    </style>
 </head>
+
 <body>
-    <h2>@ViewBag.Title</h2>
-    <div><a href="/Home/Index">Home</a> | <a href="/Home/About">About</a></div>
-    <div> @RenderBody() </div>
-    <footer>
+     <!-- Основное содержимое -->
+    <div class="main-content">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </div>
+
+    <footer class="container">
         @if (IsSectionDefined("Footer"))
         {
             @RenderSection("Footer")
         }
         else
         {
+            <span>© @DateTime.Now.Year - Мое приложение. Все права защищены.</span>
             <span>Содержание элемента footer по умолчанию.</span>
         }
     </footer>
+
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
