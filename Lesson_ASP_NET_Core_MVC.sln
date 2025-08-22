@@ -31,7 +31,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApp3_7", "MvcApp3_7\MvcA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApp3_8", "MvcApp3_8\MvcApp3_8.csproj", "{CE027DE4-BFD0-42C3-86D2-39A7C481A28A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApp4_0", "MvcApp4_0\MvcApp4_0.csproj", "{E076C32B-177E-4B22-A895-EEB732D6C10F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApp4_0", "MvcApp4_0\MvcApp4_0.csproj", "{DC09D838-AE4B-478C-B2FA-A30CDD537BC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,10 +95,10 @@ Global
 		{CE027DE4-BFD0-42C3-86D2-39A7C481A28A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE027DE4-BFD0-42C3-86D2-39A7C481A28A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE027DE4-BFD0-42C3-86D2-39A7C481A28A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E076C32B-177E-4B22-A895-EEB732D6C10F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E076C32B-177E-4B22-A895-EEB732D6C10F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E076C32B-177E-4B22-A895-EEB732D6C10F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E076C32B-177E-4B22-A895-EEB732D6C10F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC09D838-AE4B-478C-B2FA-A30CDD537BC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC09D838-AE4B-478C-B2FA-A30CDD537BC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC09D838-AE4B-478C-B2FA-A30CDD537BC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC09D838-AE4B-478C-B2FA-A30CDD537BC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

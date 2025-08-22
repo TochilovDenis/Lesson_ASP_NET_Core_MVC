@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Person tom = new Person("Tom", 37);
+}
+
+<h1>Index Content</h1>
+
+<h2>Person Data</h2>
+<h3>Name: @tom.Name</h3>
+<h3>Age: @tom.Age</h3>
+
+@await Html.PartialAsync("Hello")
+
+<form method="post">
+    <p>
+        <label for="language">Выберите язык:</label>
+        <select multiple name="languages">
+            <option value="csharp">C#</option>
+            <option value="vbnet">Visual Basic.NET</option>
+            <option value="fsharp">F#</option>
+            <option value="typescript">TypeScript</option>
+        </select>
+    </p>
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>
+
+@section Footer {
+       Copyright© AcademyTop, @DateTime.Now.Year. All rights reserved
+}

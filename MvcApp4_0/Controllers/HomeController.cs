@@ -2,6 +2,7 @@
 
 namespace MvcApp4_0.Controllers
 {
+    [Route("Home/{action?}/{age?}/{name?}")]
     public class HomeController : Controller
     {
         //[HttpGet]
@@ -14,17 +15,28 @@ namespace MvcApp4_0.Controllers
         //public string Contact(int age = 5, string name = "Dex") 
         //    => $"Home/Contact action - Name: {name}, Age: {age}";
 
-        [Route("Home/Index")]
-        public IActionResult Index() { return Content("Home/Index action"); }
 
-        [Route("Home/About")]
-        public IActionResult About(){ return Content("Home/About action"); }
+        [HttpGet]
+        //[Route("Home/Index")]
+        public IActionResult Index() => View();
 
 
-        [Route("Home/Contact/{age:int?}/{name?}")]
+        [HttpGet]
+        //[Route("Home/About")]
+        public IActionResult About() => View();
+
+
+        [HttpGet]
+        //[Route("Home/Contact/{age:int?}/{name?}")]
         public IActionResult Contact(int age = 5, string name = "Dex")
         {
             return Content($"Home/Contact action - Name: {name}, Age: {age}");
+        }
+
+        [HttpGet]
+        public IActionResult Hello()
+        {
+            return PartialView();
         }
     }
 }
