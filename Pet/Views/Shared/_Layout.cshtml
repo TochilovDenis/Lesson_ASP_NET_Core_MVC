@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - Pet ASP.NET App</title>
+   
+</head>
+
+<body>
+    <!-- Основное содержимое -->
+    <div class="main-content">
+        <div class="container">
+            <a href="/Home/Index">Главная</a>
+            @RenderBody()
+        </div>
+    </div>
+
+    <footer class="container">
+        @if (IsSectionDefined("Footer"))
+        {
+            @RenderSection("Footer")
+        }
+        else
+        {
+            <span>© @DateTime.Now.Year - Мое приложение. Все права защищены.</span>
+            <span>Содержание элемента footer по умолчанию.</span>
+        }
+    </footer>
+</body>
+</html>
