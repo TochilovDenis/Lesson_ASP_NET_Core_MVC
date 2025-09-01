@@ -1,0 +1,39 @@
+﻿@using MvcApp5_0.ViewModels
+@using static MvcApp5_0.Models.Models
+@model IndexViewModel
+
+@{
+    ViewBag.HeaderTitle = "Компания";
+}
+<style>
+    td {
+        padding: 5px;
+    }
+
+    tr:nth-child(even) {
+        background: #CCC
+    }
+
+    tr:nth-child(odd) {
+        background: #FFF
+    }
+</style>
+
+<form>
+    <label>Выберите компанию:</label>
+    <select name="companyId">
+        @foreach (CompanyModel comp in Model.Companies)
+        {
+            <option value="@comp.Id">@comp.Name</option>
+        }
+    </select>
+    <input type="submit" />
+</form>
+<br />
+<table>
+    <tr><td>Name</td><td>Company</td><td>Age</td></tr>
+    @foreach (Person1 p in Model.People)
+    {
+        <tr><td>@p.Name</td><td>@p.Work.Name</td><td>@p.Age</td></tr>
+    }
+</table>
