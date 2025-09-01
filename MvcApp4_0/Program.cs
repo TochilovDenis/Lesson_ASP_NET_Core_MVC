@@ -41,18 +41,7 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 */
 
-// маршрут для области account
-app.MapAreaControllerRoute(
-    name: "Account",
-    areaName: "Account",
-    pattern: "api-account/{controller=Home}/{action=Index}/{id?}");
-
-// добавляем поддержку для контроллеров, которые располагаются вне области
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-
-// app.MapControllers();
+app.MapControllers();
 
 app.Run();
 
