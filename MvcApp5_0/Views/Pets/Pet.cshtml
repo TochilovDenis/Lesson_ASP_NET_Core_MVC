@@ -1,10 +1,6 @@
-﻿
-@{
-    ViewBag.Title = "Питомцы";
+﻿@{
+    ViewBag.HeaderTitle = "Питомцы";
 }
-
-@model IEnumerable<Pets>
-
 
 <h2>Pets Form</h2>
 <form method="post">
@@ -30,8 +26,9 @@
     </p>
 </form>
 
-
 <h2>Pets</h2>
+
+@model IEnumerable<Pets>
 <table class="table">
     <tr><td>Id</td><td>Name</td><td>Age</td><td>Breed</td></tr>
     @foreach (var p in Model)

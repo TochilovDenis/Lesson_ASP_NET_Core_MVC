@@ -3,7 +3,7 @@ using MvcApp5_0.Models;
 
 namespace MvcApp5_0.Controllers
 {
-    [Route("{controller=Pet}/{action?}")]
+    [Route("{controller=Pets}/{action}")]
     public class PetsController : Controller
     {
 
@@ -17,7 +17,7 @@ namespace MvcApp5_0.Controllers
         [HttpGet]
         public ActionResult pet()
         {
-            return View("Pet", pets);
+            return View();
         }
 
         [HttpPost]
