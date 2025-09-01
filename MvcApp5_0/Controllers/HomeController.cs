@@ -5,11 +5,11 @@ using MvcApp5_0.Models;
 
 namespace MvcApp5_0.Controllers
 {
-    [Route("Home/{action=index}")]
+    [Route("{controller=Home}/{action=index}")]
     public class HomeController : Controller
     {
 
-        List<Person> people = new List<Person>
+        IEnumerable<Person> people = new List<Person>
         {
             new Person(1, "Tom", 37),
             new Person(2, "Bob", 41),
@@ -24,55 +24,32 @@ namespace MvcApp5_0.Controllers
             return View();
         }
 
-        /*[HttpPost]
-        public IActionResult Index(string[] languages)
-        {
-            string result = "Вы выбрали:";
-            foreach (string lang in languages)
-            {
-                result = $"{result} {lang};";
-            }
-            return Content(result);
-        }*/
-
-
         //[HttpPost]
-        //public IActionResult Index(string[] languages, string name, string password, int age, string comment)
+        //public IActionResult Index(string[] languages)
         //{
-        //    // Проверяем, какая форма была отправлена
-        //    if (languages != null && languages.Length > 0)
+        //    string result = "Вы выбрали:";
+        //    foreach (string lang in languages)
         //    {
-        //        // Обработка выбора языков
-        //        string result = "Вы выбрали: " + string.Join(", ", languages);
-        //        return Content(result);
+        //        result = $"{result} {lang};";
         //    }
-        //    else if (!string.IsNullOrEmpty(name))
-        //    {
-        //        // Обработка пользовательской формы
-        //        return Content($"User Name: {name}   Password: {password}   Age: {age}  Comment: {comment}");
-        //    }
-        //    else
-        //    {
-        //        return Content("Данные не получены");
-        //    }
+        //    return Content(result);
         //}
 
         [HttpPost]
-        public ActionResult Index(int id, string name, int age)
+        public IActionResult Index(string name, string password, int age, string comment)
         {
-            people.Add(new Person(id, name, age));
-            return View(people);
+            // Обработка пользовательской формы
+            return Content($"User Name: {name}   Password: {password}   Age: {age}  Comment: {comment}");
+
         }
-
-
 
         [HttpGet]
         //[Route("Home/About")]
         public IActionResult About()
         {
             ViewBag.Title = "About";
-            ViewBag.HeaderTitle = "bla-bla";
-            return View("About");
+            ViewBag.HeaderTitle = "Person";
+            return View("About", people);
         }
 
 
