@@ -2,16 +2,20 @@
 
 namespace MvcApp4_0.Controllers
 {
-    [Route("Home/{action?}/{age:int?}/{name?}")]
+    [Route("{controller=Home}/{action=Index}")]
+    //[Route("Home/{action?}/{age:int?}/{name?}")]
     public class HomeController : Controller
     {
+
+        public string Index() => "HomeController вне области";
+
         [HttpGet]
         //[Route("Home/Index")]
-        public IActionResult Index()
-        {
-            ViewBag.HeaderTitle = "Добро пожаловать!";
-            return View();
-        }
+        //public IActionResult Index()
+        //{
+        //    ViewBag.HeaderTitle = "Добро пожаловать!";
+        //    return View();
+        //}
 
         /*[HttpPost]
         public IActionResult Index(string[] languages)
