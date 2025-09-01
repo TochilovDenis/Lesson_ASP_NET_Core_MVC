@@ -41,10 +41,11 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 */
 
-// добавляем поддержку контроллеров, которые располагаются в области
-app.MapControllerRoute(
+// маршрут для области account
+app.MapAreaControllerRoute(
     name: "Account",
-    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+    areaName: "Account",
+    pattern: "api-account/{controller=Home}/{action=Index}/{id?}");
 
 // добавляем поддержку для контроллеров, которые располагаются вне области
 app.MapControllerRoute(
