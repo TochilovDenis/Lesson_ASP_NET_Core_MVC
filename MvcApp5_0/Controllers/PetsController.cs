@@ -17,7 +17,7 @@ namespace MvcApp5_0.Controllers
         [HttpGet]
         public ActionResult pet()
         {
-            return View();
+            return View(pets);
         }
 
         [HttpPost]
