@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApp4_0", "MvcApp4_0\MvcA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pet", "Pet\Pet.csproj", "{39DCF637-4EF7-4138-8F54-F153D8FF7056}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApp5_0", "MvcApp5_0\MvcApp5_0.csproj", "{1EF896A8-2861-4872-9642-1F75C6DE0D2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{39DCF637-4EF7-4138-8F54-F153D8FF7056}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39DCF637-4EF7-4138-8F54-F153D8FF7056}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39DCF637-4EF7-4138-8F54-F153D8FF7056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EF896A8-2861-4872-9642-1F75C6DE0D2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EF896A8-2861-4872-9642-1F75C6DE0D2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EF896A8-2861-4872-9642-1F75C6DE0D2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EF896A8-2861-4872-9642-1F75C6DE0D2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

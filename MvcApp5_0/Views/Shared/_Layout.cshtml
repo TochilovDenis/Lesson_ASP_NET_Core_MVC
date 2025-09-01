@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - My ASP.NET App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Стили для header */
+        .header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-bottom: 2px solid #e9ecef;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+            .header h1 {
+                margin: 0;
+                color: #343a40;
+                font-size: 2.5rem;
+            }
+
+        .nav-menu {
+            margin-top: 15px;
+            display: flex;
+            gap: 20px;
+        }
+
+            .nav-menu a {
+                text-decoration: none;
+                color: #007bff;
+                font-weight: 500;
+                padding: 5px 10px;
+                border-radius: 4px;
+                transition: all 0.3s ease;
+            }
+
+                .nav-menu a:hover {
+                    background-color: #007bff;
+                    color: white;
+                    text-decoration: none;
+                }
+
+        .main-content {
+            padding: 30px 20px;
+            min-height: calc(100vh - 200px);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Секция Header -->
+    <header class="header">
+        <div class="container">
+            @if (IsSectionDefined("Header"))
+            {
+                @RenderSection("Header")
+            }
+            else
+            {
+                <!-- Header по умолчанию -->
+                <div class="default-header">
+                    <h1>@(ViewBag.HeaderTitle)</h1>
+                    <nav class="nav-menu">
+                        <nav class="nav-menu">
+                            <a href="/Home/Index">Главная</a>
+                            <a href="/Home/About">О нас</a>
+                            <a href="/Home/Contact">Контакты</a>
+                            <a href="/Pet/Pet">Питомцы</a>
+                        </nav>
+                    </nav>
+                </div>
+            }
+        </div>
+    </header>
+
+     <!-- Основное содержимое -->
+    <div class="main-content">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </div>
+
+    <footer class="container">
+        @if (IsSectionDefined("Footer"))
+        {
+            @RenderSection("Footer")
+        }
+        else
+        {
+            <span>© @DateTime.Now.Year - Мое приложение. Все права защищены.</span>
+            <span>Содержание элемента footer по умолчанию.</span>
+        }
+    </footer>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

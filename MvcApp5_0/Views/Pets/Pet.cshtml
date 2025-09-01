@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Питомцы";
+}
+
+@model IEnumerable<Pets>
+
+
+<h2>Pets Form</h2>
+<form method="post">
+    <p>
+        <label>Id</label><br />
+        <input type="number" name="id" />
+    </p>
+    <p>
+        <label>Name:</label><br />
+        <input type="text" name="name" />
+    </p>
+   
+    <p>
+        <label>Age:</label><br />
+        <input type="number" name="age" />
+    </p>
+    <p>
+        <label>Breed:</label><br />
+        <input type="text" name="breed" />
+    </p>
+    <p>
+        <input type="submit" value="Send" />
+    </p>
+</form>
+
+
+<h2>Pets</h2>
+<table class="table">
+    <tr><td>Id</td><td>Name</td><td>Age</td><td>Breed</td></tr>
+    @foreach (var p in Model)
+    {
+        <tr><td>@p.Id</td><td>@p.Name</td><td>@p.Age</td><td>@p.Breed</td></tr>
+    }
+</table>
