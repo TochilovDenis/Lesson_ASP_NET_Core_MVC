@@ -1,4 +1,5 @@
-﻿using static MvcApp5_0.Models.Models;
+﻿using MvcApp5_0.Models;
+using static MvcApp5_0.Models.Models;
 
 namespace MvcApp5_0.ViewModels
 {
