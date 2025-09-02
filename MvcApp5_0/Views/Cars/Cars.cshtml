@@ -1,0 +1,83 @@
+﻿@using MvcApp5_0.ViewModels
+@using MvcApp5_0.Models
+
+@{
+    ViewBag.HeaderTitle = "Автомобили";
+}
+
+@model CarsViewModel
+
+<h2>Список деталей</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID детали</th>
+            <th>Название детали</th>
+            <th>Описание детали</th>
+            <th>Цена</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Parts part in Model.Parts_)
+        {
+            <tr>
+                <td>@part.Id</td>
+                <td>@part.Name</td>
+                <td>@part.Definition</td>
+                <td>@part.Price.ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h2>Список автомобилей</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID автомобиля</th>
+            <th>Название автомобиля</th>
+            <th>Описание детали</th>
+            <th>Цена</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Cars car in Model.Cars_)
+        {
+            <tr>
+                <td>@car.Id</td>
+                <td>@car.Name</td>
+                <td>@car.Parts.Definition</td>
+                <td>@car.Parts.Price.ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h2>Добавить новый автомобиль</h2>
+<form method="post">
+    <p>
+        <label>ID: </label>
+        <input type="number" name="Id" />
+    </p>
+    <p>
+        <label>Название автомобиля: </label>
+        <input type="text" name="CarName" />
+    </p>
+    <p>
+        <label>Id детали: </label>
+        <input type="number" name="PartId" />
+    </p>
+    <p>
+        <label>Название детали: </label>
+        <input type="text" name="PartName" />
+    </p>
+    <p>
+        <label>Описание детали: </label>
+        <input type="text" name="PartDefinition" />
+    </p>
+    <p>
+        <label>Цена: </label>
+        <input type="number" name="PartPrice" step="0.01" />
+    </p>
+    <p><input type="submit" value="Добавить" /></p>
+</form>
