@@ -1,13 +1,27 @@
 ﻿@{
     ViewBag.Title = "Список стран";
-    string[] cities = new string[] { "Лондон", "Париж", "Берлин" };
-    string[] countries = new string[] { "Великобритания", "Франция", "Германия" };
+
+    // string[] cities = new string[] { "Лондон", "Париж", "Берлин" };
+    // string[] countries = new string[] { "Великобритания", "Франция", "Германия" };
+     
+    string[] cities = new string[] 
+    { 
+        "Город на Л, 6 букв", 
+        "Столица и крупнейший город Франции?", 
+        "У какого города телефонный код: +49"
+    };
+    string[] countries = new string[] 
+    { "Суверенное государство у северо-западного побережья континентальной Европы, состоящее из Англии, Уэльса...",
+      "Страна багетов и круассанов", 
+      "is a country in Central Europe. It lies between the Baltic Sea and the North Sea to the north and the Alps to the south." 
+    };
 }
+
 @using MvcApp6_0
 
-<h3>Города</h3>
-@Html.CreateList(cities)
+@* <h3>Города</h3> *@
+@Html.CreateList(cities, "Города")
 <br />
-<h3>Страны</h3>
+@* <h3>Страны</h3> *@
 <!-- или можно вызвать так -->
-@ListHelper.CreateList(Html, countries)
+@ListHelper.CreateList(Html, countries, "Страны")
