@@ -1,7 +1,7 @@
 ﻿using System.Xml.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using MvcApp5_0.Models;
+using MvcApp6_0.Models;
 
 namespace MvcApp5_0.Controllers
 {
@@ -59,5 +59,13 @@ namespace MvcApp5_0.Controllers
         {
             return Content($"Home/Contact action - Name: {name}, Age: {age}");
         }
+
+
+        [HttpGet]
+        public IActionResult ListCountries()
+        {
+            return View();
+        }
+
     }
 }
