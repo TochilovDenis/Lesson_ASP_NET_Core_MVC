@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Главная страница";
+    //Person tom = new Person(1, "Tom", 37);
+
+   
+}
+
+@section Header {
+    <div class="custom-header">
+        <h1 style="color: #ff6b6b;">Добро пожаловать на главную!</h1>
+        <nav class="nav-menu">
+            <a href="/Home/Index" style="background-color: #ff6b6b; color: white;">Главная</a>
+            <a href="/Home/About">Person</a>
+            <a href="/Home/Contact">Контакты</a>
+        </nav>
+    </div>
+}
+
+@* <h2>Person Data</h2>
+<h3>Name: @tom.Name</h3>
+<h3>Age: @tom.Age</h3> *@
+
+@await Html.PartialAsync("UserForm")
+
+@* <form method="post">
+    <p>
+        <label for="language">Выберите язык:</label>
+        <select multiple name="languages">
+            <option value="csharp">C#</option>
+            <option value="vbnet">Visual Basic.NET</option>
+            <option value="fsharp">F#</option>
+            <option value="typescript">TypeScript</option>
+        </select>
+    </p>
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form> *@
+
+@section Footer {
+       Copyright© AcademyTop, @DateTime.Now.Year. All rights reserved
+}
