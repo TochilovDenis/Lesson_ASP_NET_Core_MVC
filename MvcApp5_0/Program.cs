@@ -1,10 +1,15 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using MvcApp5_0.Services;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // добавляем поддержку контроллеров с представлениями
 builder.Services.AddControllersWithViews();
 
 // внедряем сервис ITimeService
 builder.Services.AddTransient<ITimeService, SimpleTimeService>();
+
+// внедряем сервис CarServices
+builder.Services.AddSingleton<CarsServices>();
 
 var app = builder.Build();
 

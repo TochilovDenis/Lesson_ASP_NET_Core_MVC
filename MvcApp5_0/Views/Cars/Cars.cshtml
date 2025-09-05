@@ -46,14 +46,14 @@
             <tr>
                 <td>@car.Id</td>
                 <td>@car.Name</td>
-                <td>@car.Parts.Definition</td>
-                <td>@car.Parts.Price.ToString("C")</td>
+                <td>@car.parts.Definition</td>
+                <td>@car.parts.Price.ToString("C")</td>
             </tr>
         }
     </tbody>
 </table>
 
-<h2>Добавить новый автомобиль</h2>
+@* <h2>Добавить новый автомобиль</h2>
 <form method="post">
     <p>
         <label>ID: </label>
@@ -78,6 +78,35 @@
     <p>
         <label>Цена: </label>
         <input type="number" name="PartPrice" step="0.01" />
+    </p>
+    <p><input type="submit" value="Добавить" /></p>
+</form> *@
+
+<h2>Добавить новый автомобиль</h2>
+<form method="post">
+    <p>
+        <label>ID: </label>
+        <input type="number" name="cars.Id" />
+    </p>
+    <p>
+        <label>Название автомобиля: </label>
+        <input type="text" name="cars.Name" />
+    </p>
+    <p>
+        <label>ID детали: </label>
+        <input type="number" name="cars.parts.Id" />
+    </p>
+    <p>
+        <label>Название детали: </label>
+        <input type="text" name="cars.parts.Name" />
+    </p>
+    <p>
+        <label>Описание детали: </label>
+        <input type="text" name="cars.parts.Definition" />
+    </p>
+    <p>
+        <label>Цена: </label>
+        <input type="number" name="cars.parts.Price" step="0.01" />
     </p>
     <p><input type="submit" value="Добавить" /></p>
 </form>
