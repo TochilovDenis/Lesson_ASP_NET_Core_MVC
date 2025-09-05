@@ -1,160 +1,4 @@
-﻿/** {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-}*/
-
-/* Стили для header */
-/*.custom-header {
-    text-align: center;
-    padding: 15px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border-radius: 8px;
-}
-
-.header {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-bottom: 2px solid #e9ecef;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-    .header h1 {
-        margin: 0;
-        color: #343a40;
-        font-size: 2.5rem;
-    }
-
-.nav-menu {
-    margin-top: 15px;
-    display: flex;
-    gap: 20px;
-}
-
-    .nav-menu a {
-        text-decoration: none;
-        color: #002144;
-        font-weight: 500;
-        padding: 5px 10px;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-    }
-
-        .nav-menu a:hover {
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-        }
-
-.main-content {
-    padding: 30px 20px;
-    min-height: calc(100vh - 200px);
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-footer {
-    background-color: #343a40;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-top: auto;
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}*/
-
-/* Стили для таблиц */
-/*.table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-    .table th,
-    .table td {
-        padding: 12px 15px;
-        text-align: left;
-        border-bottom: 1px solid #e0e0e0;
-    }
-
-    .table th {
-        background-color: #f8f9fa;
-        font-weight: bold;
-        color: #495057;
-        padding: 16px 15px;
-    }
-
-    .table tr:last-child td {
-        border-bottom: none;
-    }
-
-    .table tr:hover {
-        background-color: #f8f9fa;
-    }*/
-
-/* Стили для форм */
-/*form {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-    form label {
-        display: inline-block;
-        width: 200px;
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
-
-    form input[type="text"],
-    form input[type="number"] {
-        width: 300px;
-        padding: 8px 12px;
-        border: 1px solid #ced4da;
-        border-radius: 4px;
-        margin-bottom: 15px;
-    }
-
-    form input[type="submit"] {
-        background-color: #007bff;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-weight: bold;
-        margin-top: 10px;
-    }
-
-        form input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-
-h2 {
-    margin: 30px 0 15px 0;
-    color: #343a40;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-}*/
-
-* {
+﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -169,6 +13,13 @@ body {
     min-height: 100vh;
 }
 
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 /* Стили для header */
 .header {
     background-color: #f8f9fa;
@@ -177,14 +28,7 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-/* Стили для кастомного хедера (используется в Index.cshtml) */
+/* Стили для кастомного хедера */
 .custom-header {
     text-align: center;
     padding: 20px;
@@ -194,22 +38,19 @@ body {
     margin-bottom: 20px;
 }
 
-    .custom-header h1 {
+    .custom-header h1,
+    .default-header h1 {
         margin: 0 0 20px 0;
         font-size: 2.5rem;
+    }
+
+    .custom-header h1 {
         text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
 
-/* Стили для хедера по умолчанию */
-.default-header {
-    text-align: center;
+.default-header h1 {
+    color: #343a40;
 }
-
-    .default-header h1 {
-        margin: 0 0 15px 0;
-        color: #343a40;
-        font-size: 2.5rem;
-    }
 
 /* Общие стили для навигационного меню */
 .nav-menu {
@@ -252,21 +93,13 @@ body {
     .default-header .nav-menu a:hover {
         background-color: #007bff;
         color: white;
-        text-decoration: none;
     }
 
 .main-content {
     flex: 1;
     padding: 30px 0;
     width: 100%;
-}
-
-footer {
-    background-color: #343a40;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    margin-top: auto;
+    min-height: calc(100vh - 200px);
 }
 
 /* Стили для таблиц */
@@ -366,28 +199,3 @@ footer {
     margin-top: 40px;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-    .nav-menu {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-        .nav-menu a {
-            width: 200px;
-            text-align: center;
-        }
-
-    .custom-header h1 {
-        font-size: 2rem;
-    }
-
-    .default-header h1 {
-        font-size: 2rem;
-    }
-
-    .container {
-        padding: 0 10px;
-    }
-}
