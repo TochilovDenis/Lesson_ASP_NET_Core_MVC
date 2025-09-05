@@ -1,5 +1,6 @@
 ﻿@{
     ViewBag.Title = "Главная страница";
+    ViewBag.HeaderTitle = "Добро пожаловать на главную!";
     //Person tom = new Person(1, "Tom", 37);
 
    
@@ -12,6 +13,7 @@
             <a href="/Home/Index" style="background-color: #ff6b6b; color: white;">Главная</a>
             <a href="/Home/About">Person</a>
             <a href="/Home/Contact">Контакты</a>
+            <a href="/Home/VideoGallery">Видеогалерея</a>
         </nav>
     </div>
 }
@@ -38,5 +40,5 @@
 </form> *@
 
 @section Footer {
-       Copyright© AcademyTop, @DateTime.Now.Year. All rights reserved
+           Copyright© AcademyTop, @DateTime.Now.Year. All rights reserved
 }

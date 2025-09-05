@@ -1,6 +1,5 @@
-﻿using System.Xml.Linq;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc;
+using MvcApp6_0;
 using MvcApp6_0.Models;
 
 namespace MvcApp5_0.Controllers
@@ -67,5 +66,11 @@ namespace MvcApp5_0.Controllers
             return View();
         }
 
+
+        [HttpGet]
+        public IActionResult VideoGallery()
+        {
+            return View();
+        }
     }
 }
