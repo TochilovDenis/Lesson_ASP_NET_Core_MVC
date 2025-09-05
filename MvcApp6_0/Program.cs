@@ -8,8 +8,9 @@ builder.Services.AddTransient<ITimeService, SimpleTimeService>();
 
 var app = builder.Build();
 
-app.MapControllers();
+app.UseStaticFiles(); // Ensure this line is present
 
+app.MapControllers();
 app.Run();
 
 public interface ITimeService
