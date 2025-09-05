@@ -67,10 +67,6 @@ namespace MvcApp5_0.Controllers
         }
 
 
-        [HttpGet]
-        public IActionResult VideoGallery()
-        {
-            return View();
-        }
+
     }
 }
